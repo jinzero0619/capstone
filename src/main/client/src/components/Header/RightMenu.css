@@ -1,0 +1,20 @@
+.rmenu-analytics {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+}
+
+.rmenu-avatar {
+  vertical-align: middle;
+  background-color: #25c8c1;
+}
+
+.rmenu-text:hover,
+.rmenu-analytics:hover,
+.rmenu-avatar:hover {
+  cursor: pointer;
+}
+
+.rmenu-text:hover {
+  text-decoration: underline;
+}

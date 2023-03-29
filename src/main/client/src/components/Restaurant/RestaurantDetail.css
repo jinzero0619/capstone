@@ -1,0 +1,77 @@
+.restdet-image {
+  width: 225px;
+  height: 225px;
+  margin-right: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.restdet-details {
+  font-size: 16px;
+}
+
+.restdet-header {
+  display: flex;
+  margin-bottom: -8px;
+}
+
+.restdet-header .det-name {
+  width: 700px;
+}
+
+.restdet-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.restdet-score {
+  font-weight: 700;
+  padding-right: 20px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.restdet-category {
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.restdet-icon:hover,
+.restdet-address:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1150px) {
+  .restdet-header .det-name {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .restdet-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .restdet-header .det-name {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .restdet-header .det-name {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .restdet-image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .restdet-header .det-name {
+    width: 300px;
+  }
+}

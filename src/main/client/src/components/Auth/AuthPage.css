@@ -1,0 +1,79 @@
+.auth-logo {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+}
+
+.auth-form {
+  width: 70%;
+}
+
+.auth-form-header {
+  font-family: "Arvo";
+  font-size: 50px;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.auth-form-button {
+  font-family: "Cabin";
+  font-size: 26px;
+  background-color: #25c8c1 !important;
+  border-color: #25c8c1 !important;
+  border-radius: 20px;
+  margin-top: 20px;
+  height: auto;
+}
+
+.auth-prompt {
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.auth-icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.auth-icon-twitter {
+  margin-top: 5px;
+}
+
+.auth-logo:hover,
+.auth-icon-google:hover,
+.auth-icon-twitter:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 428px) {
+  .auth-logo {
+    width: 200px;
+  }
+
+  .auth-form {
+    width: 90%;
+  }
+
+  .auth-form-header {
+    font-size: 40px;
+  }
+
+  .auth-form-button {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .auth-logo {
+    width: 160px;
+  }
+
+  .auth-form {
+    width: 80%;
+  }
+}

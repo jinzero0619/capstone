@@ -1,0 +1,11 @@
+.footer-col {
+  text-align: center;
+}
+
+.footer-col a {
+  color: #000000d9;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}

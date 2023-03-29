@@ -1,0 +1,57 @@
+.revitem-container {
+  border-bottom: 1.5px solid #ebebeb;
+  max-width: 900px;
+  min-width: 550px;
+  padding-top: 20px;
+  padding-left: 24px;
+}
+
+.revitem-container:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.revitem-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.revitem-image:hover {
+  cursor: pointer;
+}
+
+.revitem-name {
+  font-family: "Arvo";
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.revitem-vote {
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 428px) {
+  .revitem-image {
+    height: 90px;
+    width: 90px;
+  }
+
+  .revitem-name {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .revitem-container {
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .revitem-container {
+    min-width: 200px;
+  }
+}

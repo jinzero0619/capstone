@@ -1,0 +1,15 @@
+.userdet-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 15px;
+  margin-left: 4px;
+}
+
+.userdet-text {
+  display: flex;
+}
+
+.userdet-count {
+  font-weight: 700;
+  margin-right: 5px;
+}

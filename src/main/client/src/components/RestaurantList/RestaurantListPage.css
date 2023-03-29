@@ -1,0 +1,54 @@
+.restlist-item {
+  margin-left: 8%;
+}
+
+.restlist-map {
+  height: 80vh;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.restlist-items {
+  min-width: 1050px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .restlist-items {
+    min-width: 850px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .restlist-items {
+    min-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .restlist-items {
+    min-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .restlist-map {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .restlist-items {
+    min-width: 300px;
+  }
+
+  .restlist-item {
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .restlist-items {
+    min-width: 200px;
+  }
+}

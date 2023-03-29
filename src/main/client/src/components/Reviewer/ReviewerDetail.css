@@ -1,0 +1,29 @@
+.reviewerdet-score {
+  font-weight: 700;
+  color: #000000;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.reviewerdet-count {
+  margin-right: 20px;
+}
+
+.reviewerdet-useful {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.reviewerdet-funny {
+  margin-right: 10px;
+}
+
+.reviewerdet-cool {
+  margin-right: 2px;
+}
+
+@media only screen and (max-width: 428px) {
+  .reviewerdet-vote-container {
+    display: none;
+  }
+}

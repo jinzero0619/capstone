@@ -1,0 +1,53 @@
+.landing-content {
+  text-align: center;
+}
+
+.landing-logo {
+  display: block;
+  margin: 40px auto 30px auto;
+}
+
+.landing-input {
+  border: 2px solid #c4c4c4;
+  border-radius: 20px;
+  width: 40%;
+  min-width: 480px;
+}
+
+.landing-icon-search {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-left: 8px;
+}
+
+.landing-icon-menu {
+  width: 25px;
+  height: 25px;
+  margin-right: 4px;
+}
+
+.landing-icon-menu:hover {
+  cursor: pointer;
+}
+
+.landing-sf {
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-width: 500px;
+  padding: 25px 100px 20px 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 428px) {
+  .landing-logo {
+    width: 280px;
+  }
+
+  .landing-input {
+    min-width: 350px;
+  }
+}

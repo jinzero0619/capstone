@@ -1,0 +1,148 @@
+/* AntD */
+@import "~antd/dist/antd.css";
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Cabin:wght@500&display=swap");
+/* CSS files */
+@import "components/Auth/AuthPage.css";
+@import "components/Auth/SplitLayout.css";
+@import "components/Footer/AppFooter.css";
+@import "components/Header/AppHeader.css";
+@import "components/Header/LeftMenu.css";
+@import "components/Header/RightMenu.css";
+@import "components/Landing/LandingPage.css";
+@import "components/Landing/SearchFilter.css";
+@import "components/Restaurant/RestaurantPage.css";
+@import "components/Restaurant/RestaurantReviewItem.css";
+@import "components/Restaurant/ReviewPageDivider.css";
+@import "components/Restaurant/RestaurantDetail.css";
+@import "components/RestaurantList/RestaurantCard.css";
+@import "components/RestaurantList/RestaurantItem.css";
+@import "components/RestaurantList/RestaurantListPage.css";
+@import "components/Reviewer/ReviewContent.css";
+@import "components/Reviewer/ReviewItem.css";
+@import "components/Reviewer/ReviewRate.css";
+@import "components/Reviewer/ReviewVote.css";
+@import "components/Reviewer/ReviewerPage.css";
+@import "components/Reviewer/ReviewerDetail.css";
+@import "components/User/UserDetail.css";
+@import "components/User/SavedPageDivider.css";
+@import "components/User/UserPage.css";
+@import "components/User/SavedItemHeader.css";
+@import "components/Analytics/AnalyticsPage.css";
+@import "components/Analytics/RestaurantAnalyticsItem.css";
+@import "components/Common/Detail.css";
+@import "components/Common/PageDivider.css";
+@import "components/NotFound/NotFoundPage.css";
+/* Global */
+.ant-form-item-label label,
+#basic_username,
+#basic_password {
+  font-size: 16px;
+}
+
+.ant-divider-inner-text {
+  font-size: 16px;
+  color: #c4c4c4;
+}
+
+.ant-menu-horizontal {
+  font-size: 16px;
+  border: none;
+}
+
+.ant-menu-horizontal > .ant-menu-item {
+  color: #000000d9 !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after {
+  border-bottom: none !important;
+  transition: none !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+.ant-tooltip-inner {
+  font-size: 12px;
+}
+
+.ant-badge-dot {
+  background: #30d915;
+  width: 8px;
+  height: 8px;
+  top: 28px;
+  left: 20px;
+}
+
+.ant-layout {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.ant-layout-header {
+  background-color: #fff;
+  padding: 5px 35px 80px 10px;
+}
+
+.ant-layout-content {
+  background: #fff;
+}
+
+.ant-layout-footer {
+  padding: 15px 0;
+  background: #f7f7f7;
+}
+
+.ant-tag-default {
+  font-weight: 700;
+  color: #6e7072;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+}
+
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+.ant-pagination {
+  display: flex;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 150px;
+}
+
+.ant-pagination-total-text {
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+  .ant-pagination {
+    margin-left: 100px;
+  }
+
+  .ant-pagination-total-text {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ant-input {
+    font-size: 16px !important;
+  }
+
+  .ant-select {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .ant-pagination {
+    margin-left: 30px;
+  }
+}

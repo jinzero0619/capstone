@@ -1,0 +1,24 @@
+.revdivid-filter,
+.revdivid-sort {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.revdivid-filter {
+  margin-left: 50px;
+}
+
+.revdivid-sort {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 428px) {
+  .revdivid-filter {
+    margin-left: 35px;
+  }
+
+  .revdivid-sort {
+    margin-left: 15px;
+  }
+}
