@@ -15,6 +15,7 @@ const useSignup = () => {
         phoneNumber,
         birthDay
       });
+      console.log(response.status);
       return response.status;
     } catch (error) {
       console.log(error.message);

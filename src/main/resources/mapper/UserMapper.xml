@@ -10,8 +10,8 @@
     
     <insert id="insert" parameterType="project.capstone.domain.UserDto">
         insert into user
-        (userIndex,userName,userId,userPW,phoneNumber,userBirth)
+        (userName,userId,userPW,phoneNumber,userBirth)
         values
-            (8 ,#{userName},#{userId},#{userPW},#{phoneNumber},#{userBirth})
+            (#{userName},#{userId},#{userPW},#{phoneNumber},#{userBirth})
     </insert>
 </mapper>
