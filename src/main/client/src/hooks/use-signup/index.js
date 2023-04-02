@@ -4,13 +4,16 @@ import { useState } from "react";
 const useSignup = () => {
   const [isSigningUp, setIsSigningUp] = useState(false);
 
-  const signup = async (username, password) => {
+  const signup = async (userName, userId, userPW, phoneNumber, birthDay) => {
     setIsSigningUp(true);
 
     try {
       const response = await axios.post("/api/signup", {
-        username,
-        password,
+        userName,
+        userId,
+        userPW,
+        phoneNumber,
+        birthDay
       });
       return response.status;
     } catch (error) {
