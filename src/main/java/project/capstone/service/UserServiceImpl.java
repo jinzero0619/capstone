@@ -13,12 +13,14 @@ public class UserServiceImpl implements UserService {
     UserDao userDao;
 
     @Override
-    public UserDto getList(String name) throws Exception {
-        return userDao.select(name);
+    public String getUser(UserDto userDto) throws Exception {
+        return userDao.select(userDto);
     }
 
     @Override
     public int save(UserDto userDto) throws Exception{
         return userDao.insert(userDto);
     }
+
+
 }

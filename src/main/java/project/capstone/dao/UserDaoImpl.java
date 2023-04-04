@@ -15,11 +15,13 @@ public class UserDaoImpl implements UserDao {
     @Autowired
     SqlSession session;
 
+    // 유저조회
     @Override
-    public UserDto select(String name) {
-        return session.selectOne(namespace+"select",name);
+    public String select(UserDto userDto) {
+        return session.selectOne(namespace+"select",userDto);
     }
 
+    // 회원가입
     @Override
     public int insert(UserDto userDto) {
         return session.insert(namespace+"insert",userDto);

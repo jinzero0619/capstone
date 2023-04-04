@@ -15,10 +15,10 @@ const LoginPage = () => {
   const [isLoggingIn, login] = useLogin();
   const [form] = Form.useForm();
   const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+    userId: "",
+    userPW: "",
   });
-  const { username, password } = formData;
+  const { userId, userPW } = formData;
 
   const onInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,8 +26,9 @@ const LoginPage = () => {
 
   const onInputFinish = async () => {
     form.resetFields();
-    const responseStatus = await login(username, password);
-    switch (responseStatus) {
+    const response = await login(userId, userPW);
+    const username = response.data;
+    switch (response.status) {
       case 200:
         message.success(`Login Success: Welcome, ${username}!`);
         navigate(loginNavigateTo, {
@@ -71,26 +72,26 @@ const LoginPage = () => {
               autoComplete="off"
             >
               <Form.Item
-                label="Username"
-                name="username"
+                label="userId"
+                name="userId"
                 rules={[
                   {
                     required: true,
-                    message: "Username is required",
+                    message: "Id is required",
                   },
                 ]}
               >
                 <Input
-                  placeholder="Username"
-                  name="username"
-                  value={formData.username}
+                  placeholder="ID"
+                  name="userId"
+                  value={formData.userId}
                   onChange={onInputChange}
                 />
               </Form.Item>
 
               <Form.Item
-                label="Password"
-                name="password"
+                label="userPW"
+                name="userPW"
                 rules={[
                   {
                     required: true,
@@ -100,8 +101,8 @@ const LoginPage = () => {
               >
                 <Input.Password
                   placeholder="Password"
-                  name="password"
-                  value={formData.password}
+                  name="userPW"
+                  value={formData.userPW}
                   onChange={onInputChange}
                 />
               </Form.Item>
