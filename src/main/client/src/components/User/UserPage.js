@@ -34,6 +34,7 @@ const UserPage = () => {
       window.scrollTo(0, 0);
 
       const user = await fetchCurrentUser();
+      console.log("user = " + user);
       if (!user) {
         message.error("You need to log in first!");
         navigate("/login", {
@@ -68,7 +69,7 @@ const UserPage = () => {
         {isFetchingCurrentUser ? (
           <LoadingContainer type="user" />
         ) : (
-          <UserDetail username={currentUser.username} savedCount={totalItems} />
+          <UserDetail username={currentUser.userName} savedCount={totalItems} />
         )}
 
         <SavedPageDivider

@@ -12,15 +12,25 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userDao;
 
+    // region Select
     @Override
-    public String getUser(UserDto userDto) throws Exception {
+    public String getName(UserDto userDto) throws Exception {
         return userDao.select(userDto);
     }
 
     @Override
+    public UserDto getUser(String id) throws Exception {
+        return userDao.select(id);
+    }
+    //endregion
+
+
+    // region Insert
+    @Override
     public int save(UserDto userDto) throws Exception{
         return userDao.insert(userDto);
     }
+    // endregion
 
 
 }

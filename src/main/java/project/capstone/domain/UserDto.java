@@ -9,6 +9,8 @@ public class UserDto {
    private String phoneNumber;
    private Date userBirth;
 
+
+
    public UserDto() {}
 
     public UserDto(String userName, String userId, String userPW, String phoneNumber, Date userBirth) {

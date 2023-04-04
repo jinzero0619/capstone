@@ -4,7 +4,9 @@ import project.capstone.domain.UserDto;
 
 public interface UserService {
 
-    String getUser(UserDto userDto) throws Exception;
+    String getName(UserDto userDto) throws Exception;
+
+    UserDto getUser(String id) throws Exception;
 
     int save(UserDto userDto) throws Exception;
 }

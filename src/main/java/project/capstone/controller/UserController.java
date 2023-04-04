@@ -6,30 +6,63 @@ import org.springframework.web.bind.annotation.*;
 import project.capstone.domain.UserDto;
 import project.capstone.service.UserService;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 @RestController
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
     UserService userService;
 
-    @PostMapping("/api/login")
+    // 로그인
+    @PostMapping("/login")
     @ResponseStatus(HttpStatus.OK)
-    public String singIn(@RequestBody UserDto userDto) throws Exception {
-        System.out.println("넘어온 데이터 = " + userDto);
-        String name = userService.getUser(userDto);
+    public String singIn(@RequestBody UserDto userDto, HttpServletRequest request,
+                         HttpServletResponse response) throws Exception {
+
+        String name = userService.getName(userDto);
         if(name != null && name !=""){
             System.out.println("DB 조회 성공");
-            System.out.println("name = " + name);
+            
+            // 세션에 ID 저장
+            HttpSession session = request.getSession();
+            session.setAttribute("id",userDto.getUserId());
             return name;
         } else {
             System.out.println("name = " + name);
             System.out.println("DB 조회 실패");
-            return null;
+            return "";
         }
     }
 
+    // 접속한 유저정보
+    @GetMapping("/current_user")
+    public UserDto currentUser(HttpSession session) {
+        String id = (String) session.getAttribute("id");
+        UserDto userDto;
+        try {
+            userDto = userService.getUser(id);
+            System.out.println("userDto = " + userDto);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return userDto;
+    }
 
-    @PostMapping("/api/signup")
+    // 로그아웃
+    @GetMapping("/logout")
+    public HttpServletResponse singOut(HttpSession session, HttpServletResponse response){
+        // 세션 종료
+        session.invalidate();
+        return response;
+    }
+
+
+    // 회원가입
+    @PostMapping("/signup")
     @ResponseStatus(HttpStatus.CREATED)
     public HttpStatus signUp(@RequestBody UserDto userDto) throws Exception{
         System.out.println("[수신받은 데이터 ] = " + userDto);

@@ -34,6 +34,7 @@ const AnalyticsPage = () => {
       window.scrollTo(0, 0);
 
       const user = await fetchCurrentUser();
+      console.log(user);
       if (!user) {
         message.error("You need to log in first!");
         navigate("/login", {

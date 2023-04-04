@@ -15,7 +15,7 @@ const RightMenu = () => {
     const fetchUser = async () => {
       const user = await fetchCurrentUser();
       if (user) {
-        setCurrentUser(user.username);
+        setCurrentUser(user.userName);
       }
     };
     fetchUser();

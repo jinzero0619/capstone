@@ -4,6 +4,7 @@ import { Button, Form, Input, Row, Divider, message } from "antd";
 import SplitLayout from "./SplitLayout";
 import { useLogin } from "hooks";
 
+
 const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -11,6 +12,7 @@ const LoginPage = () => {
     location.state && location.state.from && location.state.from !== "/signup"
       ? location.state.from
       : "/";
+
 
   const [isLoggingIn, login] = useLogin();
   const [form] = Form.useForm();
@@ -31,6 +33,7 @@ const LoginPage = () => {
     switch (response.status) {
       case 200:
         message.success(`Login Success: Welcome, ${username}!`);
+        console.log(window.location.pathname);
         navigate(loginNavigateTo, {
           state: { from: window.location.pathname },
         });
